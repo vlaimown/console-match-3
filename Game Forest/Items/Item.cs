@@ -9,7 +9,7 @@ namespace Game_Forest.Items
 
         protected Cell cell;
 
-        public Item(Cell cell, ConsoleColor color = ConsoleColor.White, int value = 0)
+        public Item(Cell cell = null, ConsoleColor color = ConsoleColor.White, int value = 0)
         {
             this.color = color;
             this.value = value;
@@ -21,10 +21,10 @@ namespace Game_Forest.Items
 
         }
 
-        //public Cell Cell 
-        //{ 
-        //    get { return cell; }
-        //    set { cell = value; }
-        //}
+        public Cell Cell
+        {
+            get { return cell; }
+            set { cell = value; }
+        }
     }
 }

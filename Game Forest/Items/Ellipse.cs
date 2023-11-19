@@ -4,7 +4,7 @@ namespace Game_Forest.Items
 {
     public class Ellipse : Item
     {
-        public Ellipse(Cell cell, ConsoleColor color = ConsoleColor.Magenta, int value = 5) : base(cell, color, value)
+        public Ellipse(Cell cell = null, ConsoleColor color = ConsoleColor.Magenta, int value = 5) : base(cell, color, value)
         {
             base.cell = cell;
             base.color = color;

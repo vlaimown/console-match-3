@@ -2,22 +2,26 @@
 {
     public class Field
     {
-        //Cell[][] field;
-        Size size;
-        public Field(Size size)
+        private Cell[,] gameField;
+        public Field(Cell[,] field)
         {
-            this.size = size;
+            this.gameField = field;
         }
         public void Draw()
         {
-            for (int i = 0; i < size.Width; i++)
+            for (int i = 0; i < gameField.GetLength(0); i++)
             {
-                for (int j = 0; j < size.Heigth; j++)
+                for (int j = 0; j < gameField.GetLength(1); j++)
                 {
-                    Cell cell = new Cell(new Rect (new Point(5 * j + j + size.Width, 3 * i + size.Heigth), new Size(5, 3)), null, '-', '|', '*');
+                    Cell cell = new Cell(new Rect (new Point(8 * j + j + gameField.GetLength(0), 5 * i + gameField.GetLength(1)), new Size(8, 5)), null, '-', '|', '*');
+                    gameField[i, j] = cell;
                     cell.Draw();
                 }
             }
+        }
+        public Cell[,] GameField
+        {
+            get { return gameField; }
         }
     }
 }

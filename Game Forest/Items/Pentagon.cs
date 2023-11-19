@@ -4,7 +4,7 @@ namespace Game_Forest.Items
 {
     public class Pentagon : Item
     {
-        public Pentagon(Cell cell, ConsoleColor color = ConsoleColor.Green, int value = 5) : base(cell, color, value)
+        public Pentagon(Cell cell = null, ConsoleColor color = ConsoleColor.Green, int value = 5) : base(cell, color, value)
         {
             base.cell = cell;
             base.color = color;

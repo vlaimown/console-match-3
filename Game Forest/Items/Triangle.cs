@@ -4,7 +4,7 @@ namespace Game_Forest.Items
 {
     public class Triangle : Item
     {
-        public Triangle(Cell cell, ConsoleColor color = ConsoleColor.Blue, int value = 5) : base(cell, color, value)
+        public Triangle(Cell cell = null, ConsoleColor color = ConsoleColor.Blue, int value = 5) : base(cell, color, value)
         {
             base.cell = cell;
             base.color = color;

@@ -4,7 +4,7 @@ namespace Game_Forest.Items
 {
     public class Rhomb : Item
     {
-        public Rhomb(Cell cell, ConsoleColor color = ConsoleColor.Yellow, int value = 5) : base(cell, color, value)
+        public Rhomb(Cell cell = null, ConsoleColor color = ConsoleColor.Yellow, int value = 5) : base(cell, color, value)
         {
             base.cell = cell;
             base.color = color;

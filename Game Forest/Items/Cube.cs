@@ -8,7 +8,7 @@ namespace Game_Forest.Items
         char verticalSymb = '|';
         char connectSymb = '*';
 
-        public Cube(Cell cell, ConsoleColor color = ConsoleColor.Red, int value = 5) : base(cell, color, value)
+        public Cube(Cell cell = null, ConsoleColor color = ConsoleColor.Red, int value = 5) : base(cell, color, value)
         {
             base.cell = cell;
             base.color = color;

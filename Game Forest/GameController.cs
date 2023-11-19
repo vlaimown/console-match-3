@@ -1,32 +1,33 @@
 ﻿using Game_Forest.Items;
 using Game_Forest.GameField;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Game_Forest
 {
     public class GameController
     {
-        //Cube cube = new Cube(new Point(10,10), new Size(10, 3), ConsoleColor.Blue, 5);
-        //Ellipse ellipse = new Ellipse(new Point(10,10), new Size(10, 3), ConsoleColor.Blue, 5);
-        //Pentagon pentagon = new Pentagon(new Point(10,10), new Size(10, 3), ConsoleColor.Blue, 5);
-        //Rhomb rhomb = new Rhomb(new Point(10,10), new Size(10, 3), ConsoleColor.Blue, 5);
-        //Triangle triangle = new Triangle(new Point(10,10), new Size(10, 3), ConsoleColor.Blue, 5);
+        Cube cube = new Cube();
+        Ellipse ellipse = new Ellipse();
+        Pentagon pentagon = new Pentagon();
+        Rhomb rhomb = new Rhomb();
+        Triangle triangle = new Triangle();
 
-        List<Item> items = new List<Item>();
+        List<Item> items = new List<Item>(5);
         Random random = new Random();
 
         public void AddItems()
         {
             // принимает объекты, которые будут в игре
-            //items.Add(cube);
-            //items.Add(ellipse);
-            //items.Add(pentagon);
-            //items.Add(rhomb);
-            //items.Add(triangle);
+            items.Add(cube);
+           // items.Add(ellipse);
+            items.Add(pentagon);
+            items.Add(rhomb);
+            items.Add(triangle);
         }
 
         public Item GenerateItem()
         {
-            Item item = items[random.Next(0, 1-1)];
+            Item item = items[random.Next(0, 4)];
             return item;
         }
 
