@@ -15,26 +15,71 @@ namespace Game_Forest
         List<Item> items = new List<Item>(5);
         Random random = new Random();
 
+        private int horizontalSameItemCount = 0;
+        private int verticalSameItemCount = 0;
+
+        private Item nextItem;
+        private Item currentItem;
+        private Item prevItem;
+
         public void AddItems()
         {
             // принимает объекты, которые будут в игре
             items.Add(cube);
-           // items.Add(ellipse);
+            // items.Add(ellipse);
             items.Add(pentagon);
-            items.Add(rhomb);
-            items.Add(triangle);
+            //items.Add(rhomb);
+            //items.Add(triangle);
         }
 
-        public Item GenerateItem()
+        public Item GenerateItem(Cell cell)
         {
-            Item item = items[random.Next(0, 4)];
+            Item item = items[random.Next(0, 2)];
+            item.Cell = cell;
             return item;
         }
 
         public void FillCell(Cell cell, Item item)
         {
             cell.Item = item;
-            cell.Item.Draw();
         }
+
+        public int HorizontalSameItemCount
+        {
+            get { return horizontalSameItemCount; }
+            set { horizontalSameItemCount = value; }
+        }
+
+        public int VerticalSameItemCount
+        {
+            get { return verticalSameItemCount; }
+            set { verticalSameItemCount = value; }
+        }
+
+        public bool IsCellEmpty(Cell cell) 
+        { 
+            if (cell.Item != null)
+                return false;
+            else
+                return true;
+        }
+
+        //public Item NextItem
+        //{
+        //    get { return nextItem; }
+        //    set { nextItem = value; }
+        //}
+
+        //public Item CurrentItem
+        //{
+        //    get { return currentItem; }
+        //    set { currentItem = value; }
+        //}
+
+        //public Item PrevItem
+        //{
+        //    get { return currentItem; }
+        //    set { currentItem = value; }
+        //}
     }
 }

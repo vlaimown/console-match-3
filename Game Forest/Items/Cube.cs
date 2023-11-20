@@ -19,7 +19,7 @@ namespace Game_Forest.Items
             Console.ForegroundColor = color;
 
             cell.Rect.Point.X = cell.Rect.Point.X + cell.Rect.Size.Width / 2 - cell.Rect.Size.Width / 4;
-            cell.Rect.Point.Y = cell.Rect.Point.Y + cell.Rect.Size.Heigth / 2 - cell.Rect.Size.Heigth / 4;
+            cell.Rect.Point.Y = cell.Rect.Point.Y + cell.Rect.Size.Heigth / 2 - cell.Rect.Size.Heigth / 4+1;
 
             cell.Rect.Size.Width = cell.Rect.Size.Width / 2;
             cell.Rect.Size.Heigth = cell.Rect.Size.Heigth / 2;
