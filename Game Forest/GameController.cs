@@ -22,6 +22,18 @@ namespace Game_Forest
         private Item currentItem;
         private Item prevItem;
 
+        private DefeatWindow defeatWindow;
+
+        public GameController(DefeatWindow defeatWindow)
+        {
+            this.defeatWindow = defeatWindow;
+        }
+
+        public void Defeat()
+        {
+            defeatWindow.Draw();
+        }
+
         public void AddItems()
         {
             // принимает объекты, которые будут в игре
