@@ -12,6 +12,10 @@
         }
 
         public Point Point { get { return point; } }
-        public Size Size { get { return size; } }
+        public Size Size 
+        { 
+            get { return size; } 
+            set { size = value; }
+        }
     }
 }

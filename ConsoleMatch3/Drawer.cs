@@ -6,7 +6,7 @@ namespace Game_Forest
     {
         public static void DrawHorizontalLine(Point point, Size size, char symb, char connectSymb, int offsetX = 0, int offsetY = 0)
         {
-            Console.SetCursorPosition(point.X, point.Y + offsetY);
+            Console.SetCursorPosition(point.X + offsetX, point.Y + offsetY);
 
             Console.Write(connectSymb);
 
@@ -20,7 +20,7 @@ namespace Game_Forest
         {
             for (int i = 1; i < size.Heigth; i++)
             {
-                Console.SetCursorPosition(point.X + offsetX, point.Y + i);
+                Console.SetCursorPosition(point.X + offsetX, point.Y + i + offsetY);
                 Console.Write(symb);
             }
         }

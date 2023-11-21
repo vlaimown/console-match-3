@@ -10,7 +10,7 @@
             base.connectSymb = connectSymb;
         }
 
-        override public void Draw()
+        override public void Draw(Rect rect, int coef, int offsetY, int offsetX)
         {
             Drawer.DrawHorizontalLine(rect.Point, rect.Size, horizontalSymb, connectSymb);
 
